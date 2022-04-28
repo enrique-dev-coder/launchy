@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #000422 100%);
+  /*overflow: hidden;*/
+  height: 100%;
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+canvas {
+  position: absolute;
+}
+.modalposition {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(33, 21, 57, 0.7);
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@layer components {
+  .counterBtn {
+    @apply h-14 w-14 rounded-full bg-darkBlue flex items-center justify-center 
+    border-4 border-silver  mb-2
+    text-sm md:text-lg;
+  }
+  .counterText {
+    @apply text-xs md:text-base lg:text-lg;
+  }
+  .formField {
+    @apply flex flex-col text-white w-11/12 m-auto text-sm  my-5 md:text-base;
+  }
+  .inputField {
+    @apply text-white outline-none focus:ring-0 border-2 border-white focus:border-white;
+  }
+  .desktopCardSignleContainer {
+    @apply relative transition-all ease-in-out delay-150 hover:-translate-y-2 mt-5;
+  }
+  .generalContainer {
+    @apply w-4/5  md:h-screen lg:w-full lg:max-w-4xl xl:max-w-6xl m-auto;
+  }
+}
